@@ -2,11 +2,11 @@
 #include <iomanip>
 #include <bits/stdc++.h>
 
-//Coin input
-//data.out sends email if the stock drops down by 10%
 
 using namespace std;
 ifstream f("data.in");
+
+
 int main()
 {
 int num=0;
@@ -112,7 +112,6 @@ do{
     }
 if(validItem==true){
         cout<<"\n";
-        //cout<<"Accept""<<pennies, nickels, dimes, and quarters as well as 1 and 2 dollar bills."<<endl;
         cout<<"\n";
         cout<<"Enter the total payment"<<endl;
         cin>>pay;
@@ -136,19 +135,24 @@ if(validItem==true){
             cout<<"Collect your food item from below"<<endl;
             cout<<"\n";
             cout<<"Return Change: "<<currencyType<<x<<endl;
-            int change=x*100;
+            float ch=x*100;
+            int change=ch;
+
             int typeSix= change/fCurrencyTypeVal;
             int typeFive= change%fCurrencyTypeVal/eCurrencyTypeVal;
             int typeFour= change%fCurrencyTypeVal%eCurrencyTypeVal/dCurrencyTypeVal;
             int typeThree= change%fCurrencyTypeVal%eCurrencyTypeVal%dCurrencyTypeVal/cCurrencyTypeVal;
             int typeTwo= change%fCurrencyTypeVal%eCurrencyTypeVal%dCurrencyTypeVal%cCurrencyTypeVal/bCurrencyTypeVal;
             int typeOne= change%fCurrencyTypeVal%eCurrencyTypeVal%dCurrencyTypeVal%cCurrencyTypeVal%bCurrencyTypeVal/aCurrencyTypeVal;
+
             cout<<"Returning "<<typeSix<<" "<<fCurrencyType<<endl;
             cout<<"Returning "<<typeFive<<" "<<eCurrencyType<<endl;
             cout<<"Returning "<<typeFour<<" "<<dCurrencyType<<endl;
             cout<<"Returning "<<typeThree<<" "<<cCurrencyType<<endl;
             cout<<"Returning "<<typeTwo<<" "<<bCurrencyType<<endl;
-            cout<<"Returning "<<typeOne<<" "<<aCurrencyType<<endl;}
+            cout<<"Returning "<<typeOne<<" "<<aCurrencyType<<endl;
+
+            }
             else {cout<<"Oops! we ran out of the product you are looking for, please try a different product"<<endl;
             num=0;}
 
@@ -159,7 +163,8 @@ if(validItem==true){
             cout<<"Thank you"<<endl;
             cout<<"\n";
             cout<<"Return Change: "<<currencyType<<pay<<endl;
-            int change=pay*100;
+            float ch=pay*100;
+            int change=ch;
             int typeSix= change/fCurrencyTypeVal;
             int typeFive= change%fCurrencyTypeVal/eCurrencyTypeVal;
             int typeFour= change%fCurrencyTypeVal%eCurrencyTypeVal/dCurrencyTypeVal;
@@ -172,9 +177,6 @@ if(validItem==true){
             cout<<"Returning "<<typeThree<<" "<<cCurrencyType<<endl;
             cout<<"Returning "<<typeTwo<<" "<<bCurrencyType<<endl;
             cout<<"Returning "<<typeOne<<" "<<aCurrencyType<<endl;
-
-
-
 
 
             }
